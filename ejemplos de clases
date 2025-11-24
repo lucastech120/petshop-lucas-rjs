@@ -1,0 +1,22 @@
+   //*  <div>
+      <h1 className='colorFondoPrincipal'>Bienvenidos a al proyecto, de momento llevamos {cantidad} commits </h1>
+      <h2 style={colorFondo}>Subtitulo</h2>
+      <h3 style={{color: "blue"}}>Probando estilos</h3>
+  
+    <Boton texto="Agregar">
+    </Boton>
+    <Boton texto="Eliminar">
+    </Boton>
+    <Boton texto="Salir">
+    </Boton>
+    </div> */}
+
+
+
+    <div>
+
+          <ItemCount stock={20}/>
+          <hr />
+          <ItemCount stock={15}/>
+    
+    </div>

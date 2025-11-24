@@ -1,16 +1,41 @@
 import React from 'react'
-import Boton from './Boton/Boton'
+import Boton from './components/Boton/Boton'
+import "./App.css"
+import "bootstrap"
+import 'bootstrap/dist/css/bootstrap.min.css'
+import ItemCount from './components/ItemCount/ItemCount'
+import NavBar from './components/NavBar/NavBar'
+  // import TituloPrincipal from './components/TituloPrincipal/TituloPrincipal'
 
 const App = () => {
-  return (
-    <div>
-      <h1>Clase 1 de React</h1>
-      <h2>Subtitulo (devolver 1 sol ocomponente padre, siempre un div con todo el resto de la estructura dentro)</h2>
-      <Boton>
+  // Se puede escribir lógica JS fuera del return, para luego utilizarla dentro del mismo
+  function saludo(){
+    console.log("Hola mundo")
+  }
 
-      </Boton>
-    </div>
+  saludo() 
+
+  let cantidad = 1
+
+  let colorFondo = {backgroundColor: "green"}
+
+  const celular = {
+    marca: "Samsung",
+    precio: 500000
+  }
+
+   // (Hacer siempre return de 1 solo componente padre, siempre un div y/o section con todo el resto de la estructura dentro)
+   // <TituloPrincipal saludo="Esto es una props" producto={celular}> </TituloPrincipal>
+  return (
+
+   <div>
+    
+    <NavBar></NavBar>
+
+    <ItemListContainer></ItemListContainer>
+
+   </div>
+
   )
 }
-
 export default App
