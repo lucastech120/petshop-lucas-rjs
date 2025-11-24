@@ -1,5 +1,5 @@
 {
-  "homepage": "https://github.com/lucastech120/petshop-lucas-rjs",
+  "homepage": "https://lucastech120.github.io/petshop-lucas-rjs",
   "name": "petshop-lucas",
   "private": true,
   "version": "0.0.0",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "bootstrap": "^5.3.8",

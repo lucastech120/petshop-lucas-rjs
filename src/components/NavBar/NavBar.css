@@ -33,7 +33,7 @@
 }
 
 .navbar-menu a {
-  color: #ffe6ff;  /* tono rosado suave */
+  color: #ffe6ff;
   text-decoration: none;
   font-size: 18px;
   transition: 0.2s;
@@ -55,7 +55,6 @@
   width: 32px;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
