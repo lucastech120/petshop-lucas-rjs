@@ -1,12 +1,86 @@
-.item-details {
-  max-width: 600px;
-  margin: 40px auto;
-  text-align: center;
+/* Fondo general */
+.item-page {
+  background-color: var(--secondary);
+  min-height: 100vh;
+  color: white;
 }
 
-.item-details img {
+/* Card principal */
+.item-card {
+  display: flex;
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  background: #8a008a;
+  border-radius: 15px;
+  padding: 40px;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Imagen */
+.item-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.item-image-container img {
   width: 100%;
-  max-width: 350px;
-  border-radius: 10px;
-  margin: 20px 0;
+  max-width: 450px;
+  border-radius: 20px;
+}
+
+/* Información */
+.item-info {
+  flex: 1;
+}
+
+.item-info h2 {
+  margin-bottom: 10px;
+  font-size: 32px;
+}
+
+.item-price {
+  font-size: 28px;
+  color: #ffe600;
+  margin-bottom: 20px;
+}
+
+/* Cantidad */
+.item-quantity {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.item-quantity input {
+  width: 60px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+/* Botón */
+.add-cart-btn {
+  background: #3bb54a;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.add-cart-btn:hover {
+  background: #2a9c3e;
+}
+
+/* Texto pequeño */
+.item-small-text {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-top: 5px;
 }

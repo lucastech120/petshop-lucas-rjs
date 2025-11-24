@@ -13,14 +13,14 @@ const Aside = () => {
 
       <ul className="nav flex-column">
 
-        {/* 🔍 Ver todo */}
+        {/* Ver todo */}
         <li className="nav-item mb-3">
           <NavLink className="nav-link text-white" to="/">
-            Ver todos
+            Productos
           </NavLink>
         </li>
 
-        {/* 🐶 Perros */}
+        {/* Perros */}
         <li className="nav-item dropdown-hover mb-3">
 
           {/* Enlace principal clickeable */}
@@ -28,7 +28,7 @@ const Aside = () => {
             Perros
           </NavLink>
 
-          {/* Subcategorías (dropdown con hover) */}
+          {/* Subcategorías */}
           <ul className="dropdown-menu show-on-hover">
             <li><NavLink className="dropdown-item" to="/perros/alimentos">Alimentos</NavLink></li>
             <li><NavLink className="dropdown-item" to="/perros/salud">Salud</NavLink></li>
@@ -37,7 +37,7 @@ const Aside = () => {
           </ul>
         </li>
 
-        {/* 🐱 Gatos */}
+        {/* Gatos */}
         <li className="nav-item dropdown-hover">
 
           <NavLink className="nav-link text-white" to="/gatos">

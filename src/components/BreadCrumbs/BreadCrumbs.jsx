@@ -1,11 +1,12 @@
 import { Link, useParams } from "react-router-dom";
+import "./BreadCrumbs.css"
 
 const BreadCrumbs = () => {
-  const { categoria, subcategoria, id } = useParams();
+  const { categoria, subcategoria, id, nombre} = useParams();
 
   return (
     <nav className="breadcrumb">
-      <Link to="/">Productos</Link>
+      <Link to="/">Inicio</Link>
 
       {categoria && (
         <>
@@ -24,7 +25,7 @@ const BreadCrumbs = () => {
       {id && (
         <>
           {" / "}
-          <span>{id}</span>
+          <span>{nombre}</span>
         </>
       )}
     </nav>

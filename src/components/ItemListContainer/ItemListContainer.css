@@ -1,8 +1,8 @@
 /* Contenedor principal */
 .contenedor {
   display: flex;
-  width: 100% !important; 
-  background-color: var(--bg-dark);
+  width: 100% !important;
+  background-color: var(--secondary);
   min-height: 100vh;
 }
 
@@ -15,3 +15,16 @@
   justify-content: center;
   width: 100%;
 }
+
+.spinner {
+  color: white;
+  width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+

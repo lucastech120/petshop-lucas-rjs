@@ -1,4 +1,6 @@
+
 .breadcrumb {
-    width: 100%;
-    
+  width: 100%;
+  background-color: var(--secondary);
+  padding: 12px;
 }

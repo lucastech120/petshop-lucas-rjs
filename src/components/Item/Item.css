@@ -43,7 +43,7 @@
   margin-bottom: 15px;
 }
 
-/* Botón principal (Agregar al carrito) */
+/* Botón principal */
 .btn-primary-custom {
   width: 100%;
   background-color: var(--primary) !important;

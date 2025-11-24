@@ -1,37 +1,36 @@
-import CartWidget from "../CartWidget/CartWidget"
-import "./NavBar.css"
-import { Link } from 'react-router-dom';
+import CartWidget from "../CartWidget/CartWidget";
+import "./NavBar.css";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
-
-  const logo = "https://lucastech120.github.io/petshop-lucas/img/petshop-logo.png"
+  const logo = "https://lucastech120.github.io/petshop-lucas/img/petshop-logo.png";
 
   return (
+    <header className="navbar">
 
+      {/* Logo */}
+      <div className="navbar-logo">
+        <img src={logo} alt="Logo Petshop Lucas" />
+        <h1>Petshop Lucas</h1>
+      </div>
 
-    <header>
+      {/* Menú */}
+      <nav className="navbar-menu">
+        <ul>
+          <li><Link to="/">Inicio</Link></li>
+          <li><Link to="/nosotros">Nosotros</Link></li>
+          <li><Link to="/preguntas">Preguntas Frecuentes</Link></li>
+          <li><Link to="/contacto">Contacto</Link></li>
+        </ul>
+      </nav>
 
-        <div className="logoandname">   
-          <img className="logo" src={logo} alt="Logo Petshop Lucas" />
-          <h1>Petshop Lucas</h1>
-        </div>
+      {/* Carrito */}
+      <div className="navbar-cart">
+        <CartWidget />
+      </div>
 
-        <nav>
-            <ul>
-                <Link to='/'>Inicio</Link>
-                
-                <Link to='/contacto'>Contacto</Link>
-
-            </ul>
-        </nav>
-
-
-        <CartWidget className="widget-cart"/>
-        
     </header>
+  );
+};
 
-
-  )
-}
-
-export default NavBar
+export default NavBar;
