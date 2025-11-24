@@ -9,8 +9,9 @@ const CartWidget = () => {
     <div>
         
 
-        <img className='imgCarrito' src={imgCarrito} alt="Imágen de un carrito de compras" />
-        
+        <section>🛒
+          <span id="contador-carrito">0</span>
+        </section>
         
     </div>
 

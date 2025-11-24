@@ -1,7 +1,15 @@
 :root {
+  
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  --primary: #5f0b46;
+  --secondary: #a32488;
+  --third: #f3a1f4;
+
+  --text-light: #ffffff;
+  --bg-dark: #0f0f0f;
+  --card-bg: #1b1b1b;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);

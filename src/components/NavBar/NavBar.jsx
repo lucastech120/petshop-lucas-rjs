@@ -4,14 +4,17 @@ import { Link } from 'react-router-dom';
 
 const NavBar = () => {
 
-
+  const logo = "https://lucastech120.github.io/petshop-lucas/img/petshop-logo.png"
 
   return (
 
 
     <header>
-      
-        <h1>Petshop Lucas</h1>
+
+        <div className="logoandname">   
+          <img className="logo" src={logo} alt="Logo Petshop Lucas" />
+          <h1>Petshop Lucas</h1>
+        </div>
 
         <nav>
             <ul>
@@ -23,7 +26,7 @@ const NavBar = () => {
         </nav>
 
 
-        <CartWidget/>
+        <CartWidget className="widget-cart"/>
         
     </header>
 

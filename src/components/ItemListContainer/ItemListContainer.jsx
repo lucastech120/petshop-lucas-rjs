@@ -1,73 +1,51 @@
+import { useParams } from "react-router-dom";
 import {useEffect, useState} from 'react'
 import Item from "../Item/Item"
 import productosJSON from "../../../productos.json"
 import  "./ItemListContainer.css"
+import Aside from '../Aside/Aside'
+import BreadCrumbs from "../BreadCrumbs/BreadCrumbs";
+
+
 
 
 
 const ItemListContainer = () => {
-
+  const { categoria, subcategoria } = useParams();
   const [productos, setProductos] = useState([])
-  useEffect(() => {
 
-  setProductos(productosJSON) 
-  
-  }, [])
-  
+ useEffect(() => {
+    fetch("/productos.json")
+      .then(res => res.json())
+      .then(data => {
 
+        let filtrados = data;
+
+        if (categoria) {
+          filtrados = filtrados.filter(p => p.categoria === categoria);
+        }
+
+        if (subcategoria) {
+          filtrados = filtrados.filter(p => p.subcategoria === subcategoria);
+        }
+
+        setProductos(filtrados);
+      });
+  }, [categoria, subcategoria]);
+  
+ 
 
   return (
 
-    <div className='container'> 
-      <aside className='aside'>
-        
-      <div className="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" >
-        <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-          <svg className="bi me-2" width="40" height="32"></svg>
-          <span className="fs-4">Sidebar</span>
-        </a>
-        <ul className="nav nav-pills flex-column mb-auto">
-          <li className="nav-item">
-            <a href="#" className="nav-link active" aria-current="page">
-              <svg className="bi me-2" width="16" height="16"></svg>
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#" className="nav-link text-white">
-              <svg className="bi me-2" width="16" height="16"></svg>
-              Dashboard
-            </a>
-          </li>
-          <li>
-            <a href="#" className="nav-link text-white">
-              <svg className="bi me-2" width="16" height="16"></svg>
-              Orders
-            </a>
-          </li>
-          <li>
-            <a href="#" className="nav-link text-white">
-              <svg className="bi me-2" width="16" height="16"></svg>
-              Products
-            </a>
-          </li>
-          <li>
-            <a href="#" className="nav-link text-white">
-              <svg className="bi me-2" width="16" height="16"></svg>
-              Customers
-            </a>
-          </li>
-        </ul>
-        <div className="dropdown">
-
-
-        </div>
-      </div>
-
-
-      </aside>
+    <div className='contenedor'> 
+      
+    <Aside/>
+    <div> 
+    <BreadCrumbs/>
     
     <div className='productos'>
+
+
       {productos.length > 0 ? (
         productos.map((prod) => (
           <Item
@@ -84,7 +62,8 @@ const ItemListContainer = () => {
         <p>Cargando productos...</p>
       )}
     </div>
- 
+
+      </div>
     </div>
 
   )

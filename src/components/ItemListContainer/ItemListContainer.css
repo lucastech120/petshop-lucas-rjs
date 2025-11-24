@@ -1,19 +1,17 @@
-.aside {
-    display: flex;
-    flex-wrap: wrap;
-    width: 15%;
+/* Contenedor principal */
+.contenedor {
+  display: flex;
+  width: 100% !important; 
+  background-color: var(--bg-dark);
+  min-height: 100vh;
 }
 
+/* Contenedor de productos */
 .productos {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    width: 85%;
-
-}
-
-.container {
- display: flex;
- width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  width: 100%;
 }

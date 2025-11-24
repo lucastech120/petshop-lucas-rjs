@@ -40,11 +40,15 @@ const App = () => {
       
       />
       <Route
-
+      path='/:categoria'
+      element = {<ItemListContainer/>}
 
 
       />
-      <Route/>
+      <Route
+      path='/:categoria/:subcategoria'
+      element = {<ItemListContainer/>}
+      />
       <Route/>
 
 
