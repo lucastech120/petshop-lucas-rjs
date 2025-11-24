@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import productos from "../../../productos.json";
+import productos from "../ItemListContainer/productos.json";
 import "./ItemDetails.css";
 import BreadCrumbs from "../BreadCrumbs/BreadCrumbs";
 
