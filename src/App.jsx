@@ -1,40 +1,56 @@
-import React from 'react'
-import Boton from './components/Boton/Boton'
-import "./App.css"
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import "bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css'
-import ItemCount from './components/ItemCount/ItemCount'
+import "./App.css"
 import NavBar from './components/NavBar/NavBar'
-  // import TituloPrincipal from './components/TituloPrincipal/TituloPrincipal'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import ItemDetails from './components/ItemDetails/ItemDetails'
+import Contacto from './components/Contacto/Contacto'
+
+
 
 const App = () => {
-  // Se puede escribir lógica JS fuera del return, para luego utilizarla dentro del mismo
-  function saludo(){
-    console.log("Hola mundo")
-  }
 
-  saludo() 
+   // (Hacer siempre return de 1 solo componente padre, siempre un BrowseRouter con todo el resto de la estructura dentro)
 
-  let cantidad = 1
 
-  let colorFondo = {backgroundColor: "green"}
-
-  const celular = {
-    marca: "Samsung",
-    precio: 500000
-  }
-
-   // (Hacer siempre return de 1 solo componente padre, siempre un div y/o section con todo el resto de la estructura dentro)
-   // <TituloPrincipal saludo="Esto es una props" producto={celular}> </TituloPrincipal>
   return (
 
-   <div>
+   <BrowserRouter>
     
-    <NavBar></NavBar>
+    <NavBar>
 
-    <ItemListContainer></ItemListContainer>
 
-   </div>
+    </NavBar>
+
+    <Routes>
+      <Route 
+      path='/'
+      element = {<ItemListContainer/>}
+
+      /> 
+      <Route
+      path='/itemdetails/:id'
+      element = {<ItemDetails/>}
+      
+      />
+      <Route
+      path='/contacto'
+      element = {<Contacto/>}
+      
+      />
+      <Route
+
+
+
+      />
+      <Route/>
+      <Route/>
+
+
+    </Routes>
+   </BrowserRouter>
+
 
   )
 }

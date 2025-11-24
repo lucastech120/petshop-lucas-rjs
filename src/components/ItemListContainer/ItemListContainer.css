@@ -1,0 +1,19 @@
+.aside {
+    display: flex;
+    flex-wrap: wrap;
+    width: 15%;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+
+}
+
+.container {
+ display: flex;
+ width: 100%;
+}
